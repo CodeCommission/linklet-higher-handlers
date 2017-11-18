@@ -1,0 +1,34 @@
+{
+  "name": "linklet-higher-handlers",
+  "version": "3.1.0",
+  "description": "Async lambda functions as HTTP microservices.",
+  "author": "Mike Bild <mike@codecommission.com>",
+  "homepage": "https://github.com/codecommission/linklet-higher-handlers#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codecommission/linklet-higher-handlers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codecommission/linklet-higher-handlers/issues"
+  },
+  "keywords": [
+    "http",
+    "microservice",
+    "async"
+  ],
+  "scripts": {
+    "test": "mocha --require async-to-gen",
+    "test:watch": "mocha --watch --require async-to-gen"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "linklet": "^3.1.0",
+    "path-to-regexp": "^2.1.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "node-fetch": "^1.7.3"
+  }
+}
