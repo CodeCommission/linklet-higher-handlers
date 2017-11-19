@@ -14,13 +14,13 @@ const sut = linklet(
   )()
 );
 
-describe('Linklet compose handler tests', () => {
+describe('Linklet compose withRoute() tests', () => {
   let instance = null;
 
   before(() => (instance = sut.listen()));
   after(() => instance.close());
 
-  it('Should handle route /items withRoute()', () => {
+  it('Should handle route /items', () => {
     return fetch(`http://localhost:${instance.address().port}/items`)
       .then(response => response.json())
       .then(actual => {
@@ -28,7 +28,7 @@ describe('Linklet compose handler tests', () => {
       });
   });
 
-  it('Should handle route /items/:id withRoute()', () => {
+  it('Should handle route /items/:id', () => {
     return fetch(`http://localhost:${instance.address().port}/items/1`)
       .then(response => response.json())
       .then(actual => {
@@ -36,7 +36,7 @@ describe('Linklet compose handler tests', () => {
       });
   });
 
-  it('Should response 404 at route / withRoute()', () => {
+  it('Should response 404 route /', () => {
     return fetch(
       `http://localhost:${instance.address().port}`
     ).then(response => {
